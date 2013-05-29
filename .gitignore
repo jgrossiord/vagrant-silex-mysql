@@ -11,3 +11,12 @@ web/bundles/*
 # Configuration files
 app/config/parameters.ini
 app/config/parameters.yml
+composer.phar
+composer.lock
+
+# Vagrant files
+.vagrant
+
+.DS_Store
+logs/web/access.log
+logs/web/error.log
