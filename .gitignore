@@ -20,3 +20,7 @@ composer.lock
 .DS_Store
 logs/web/access.log
 logs/web/error.log
+<<<<<<< HEAD
+=======
+logs/web/urls.txt
+>>>>>>> upstream/master
