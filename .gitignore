@@ -22,3 +22,5 @@ logs/web/access.log
 logs/web/error.log
 logs/web/urls.txt
 logs/db/urls.txt
+logs/apt-cache/*.deb
+logs/apt-cache/lock
