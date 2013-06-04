@@ -6,11 +6,13 @@ Vagrant.configure("2") do |config|
   config.vm.define :web do |web|
     web.vm.provision :shell, :path => "script/vagrant-web-bootstrap.sh"
     web.vm.network :private_network, ip: "10.11.12.1"
+    web.vm.synced_folder "./", "/vagrant", :owner => "www-data", :group => "www-data"
   end
 
   config.vm.define :db do |db|
     db.vm.provision :shell, :path => "script/vagrant-db-bootstrap.sh"
     db.vm.network :private_network, ip: "10.11.12.2"
+
   end
 
   # All Vagrant configuration is done here. The most common configuration
