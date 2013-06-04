@@ -2,7 +2,7 @@
 
 bash /vagrant/script/vagrant-bootstrap.sh
 
-sudo apt-get install -y curl apache2 php5 php5-cli php-pear php5-curl phpunit php5-intl php5-memcache php5-dev php5-gd php5-mcrypt php5-dev git-core git #mongodb-10gen make 
+sudo apt-get install -y  -o dir::cache::archives="/vagrant/logs/apt-cache" curl apache2 php5 php5-cli php-pear php5-curl phpunit php5-intl php5-memcache php5-dev php5-gd php5-mcrypt php5-dev git-core git #mongodb-10gen make 
 
 sudo cp /vagrant/script/template/silex-app.conf /etc/apache2/sites-available/silex-app
 

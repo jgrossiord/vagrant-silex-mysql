@@ -4,7 +4,7 @@ bash /vagrant/script/vagrant-bootstrap.sh
 
 echo mysql-server-5.5 mysql-server/root_password password root | sudo debconf-set-selections
 echo mysql-server-5.5 mysql-server/root_password_again password root | sudo debconf-set-selections
-sudo apt-get install -y  mysql-server-5.5
+sudo apt-get install -y  -o dir::cache::archives="/vagrant/logs/apt-cache" mysql-server-5.5
 
 mysql -u root -proot < /vagrant/script/db-init.sql
 
