@@ -1,0 +1,9 @@
+{% extends 'layout.twig' %}
+{% block body %}
+<h1>User {{ user.id }}</h1>
+<ul>
+        <li>Id : {{ user.id }}</li>
+        <li>Firstname : {{ user.firstname }}</li>
+        <li>Lastname : {{ user.lastname }}</li>
+</ul>
+{% endblock %}
