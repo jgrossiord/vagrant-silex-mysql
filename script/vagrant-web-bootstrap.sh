@@ -22,6 +22,7 @@ php5 composer.phar update
 sudo pear config-set auto_discover 1
 sudo pear install pear.phpunit.de/PHPUnit
 
+sudo phpunit
 
 ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | grep -v '10.0.2' | grep -v '10.11.12.1' | cut -d: -f2 | awk '{ print "http://"$1"/"}' > /vagrant/logs/web/urls.txt
 echo "You can access your application on "
