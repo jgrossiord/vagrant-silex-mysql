@@ -3,6 +3,7 @@
         "silex/silex": "~1.0",
         "twig/twig": ">=1.8",
 		"monolog/monolog": ">=1.0.0",
-	    "doctrine/dbal": "2.2.*"
+	    "doctrine/dbal": "2.2.*",
+	    "symfony/browser-kit": ">=0.0.1"
     }
 }
