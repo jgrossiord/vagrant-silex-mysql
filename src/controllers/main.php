@@ -1,16 +1,16 @@
 <?php
 require_once __DIR__.'/../../vendor/autoload.php'; 
 
-
-
-
 $app = new Silex\Application();
+
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../../src/views',
 ));
+
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile' => __DIR__ . '/../../logs/silex/development.log',
 ));
+
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
@@ -22,6 +22,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'dbname' => 'silex'
     ),
 ));
+
 $app['debug'] = true;
 
 $app->get('/', function() use($app) {
@@ -34,7 +35,6 @@ $app->get('/hello/{name}', function ($name) use($app) {
         'name' => $name,
     ));
 });
-
 
 $sql = "SELECT id, firstname, lastname FROM users";
 $users = $app['db']->fetchAll($sql);
@@ -52,8 +52,6 @@ $users = array(
     )
 );*/
 
-
-
 $app->get('/users', function () use($app, $users) {
     return $app['twig']->render('users.twig', array(
     	'users' => $users,
@@ -67,7 +65,6 @@ $app->get('/users/{id_user}', function ($id_user) use($app, $users) {
     ));
 })
 ->bind('user');
-
 
 
 return $app;
