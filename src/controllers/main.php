@@ -59,12 +59,18 @@ $app->get('/users', function () use($app, $users) {
 })
 ->bind('users');
 
-$app->get('/users/{id_user}', function ($id_user) use($app, $users) {
+$app->get('/favicon.ico', function() {
+    return 1;
+});
+
+$app->get('/user/{id_user}', function($id_user) use($app) {
+    //@TODO Autoload
+    require_once(__DIR__.'/../models/User.php');
+	$user = new Models\User($id_user, $app['db']);
     return $app['twig']->render('user.twig', array(
-    	'user' => $users[$id_user],
+        'user' => $user->user()
     ));
 })
 ->bind('user');
-
 
 return $app;
