@@ -30,26 +30,12 @@ $app->get('/', function() use($app) {
 })
 ->bind('homepage');
 
-
-$sql = "SELECT id, firstname, lastname FROM users";
-$users = $app['db']->fetchAll($sql);
-/*
-$users = array(
-    1 => array(
-    	'id' => '1',
-        'firstname' => 'Julien',
-        'lastname'  => 'Grossiord'
-    ),
-    2 => array(
-    	'id' => '2',
-        'firstname' => 'John',
-        'lastname'  => 'Doe'
-    )
-);*/
-
-$app->get('/users', function () use($app, $users) {
+$app->get('/users', function () use($app) {
+    //@TODO Autoload
+    require_once(__DIR__.'/../models/Users.php');
+    $users = new Models\Users($app['db']);
     return $app['twig']->render('users.twig', array(
-    	'users' => $users,
+    	'users' => $users->users(),
     ));
 })
 ->bind('users');

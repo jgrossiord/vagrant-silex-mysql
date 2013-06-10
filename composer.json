@@ -5,5 +5,8 @@
 		"monolog/monolog": ">=1.0.0",
 	    "doctrine/dbal": "2.2.*",
 	    "symfony/browser-kit": ">=0.0.1"
+    },
+    "autoload": {
+        "psr-0": {"": "src/models/"}
     }
 }
