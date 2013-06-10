@@ -30,11 +30,6 @@ $app->get('/', function() use($app) {
 })
 ->bind('homepage');
 
-$app->get('/hello/{name}', function ($name) use($app) {
-    return $app['twig']->render('hello.twig', array(
-        'name' => $name,
-    ));
-});
 
 $sql = "SELECT id, firstname, lastname FROM users";
 $users = $app['db']->fetchAll($sql);
