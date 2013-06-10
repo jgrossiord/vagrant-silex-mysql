@@ -8,7 +8,7 @@ sudo apt-get install -y  -o dir::cache::archives="/vagrant/logs/apt-cache" mysql
 
 # disable bind-address to enable connection from other computers
 sudo sed -i -e 's/^\(bind-address\)/#\1/g' /etc/mysql/my.cnf
-sudo servie mysql restart
+sudo service mysql restart
 
 mysql -u root -proot < /vagrant/script/db-init.sql
 
