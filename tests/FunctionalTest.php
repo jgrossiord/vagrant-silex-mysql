@@ -29,7 +29,7 @@ class FunctionalTest extends WebTestCase
     public function testGetUser()
     {
         $client = $this->createClient();
-        $crawler = $client->request('GET', '/users/1');
+        $crawler = $client->request('GET', '/user/1');
         $this->assertTrue($client->getResponse()->isOk());
     }
 
