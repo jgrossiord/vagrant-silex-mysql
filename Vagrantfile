@@ -5,12 +5,12 @@ Vagrant.configure("2") do |config|
 
   config.vm.define :db do |db|
     db.vm.provision :shell, :path => "script/vagrant-db-bootstrap.sh"
-    db.vm.network :private_network, ip: "10.11.12.2"
+    db.vm.network :private_network, ip: "10.11.12.3"
   end
 
   config.vm.define :web do |web|
     web.vm.provision :shell, :path => "script/vagrant-web-bootstrap.sh"
-    web.vm.network :private_network, ip: "10.11.12.1"
+    web.vm.network :private_network, ip: "10.11.12.2"
     web.vm.synced_folder "./", "/vagrant", :owner => "www-data", :group => "www-data"
   end
 

@@ -16,7 +16,7 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
     'driver'   => 'pdo_mysql',
-    'host' => '10.11.12.2',
+    'host' => '10.11.12.3',
     'user' => 'silex',
     'password' => 'silex',
     'dbname' => 'silex'
