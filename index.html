@@ -38,24 +38,24 @@ This code generate 2 VMs ('web' &amp; 'db').</p>
 <a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <ul>
-<li>Vagrant V1.2.2 min (download and install from <a href="http://www.vagrantup.com/downloads.html">http://www.vagrantup.com/downloads.html</a>)</li>
+<li>Vagrant V1.2.2 min (download and install from <a href="http://downloads.vagrantup.com/">http://downloads.vagrantup.com/</a>)</li>
 <li>Virtualbox V4.2.12 min (download and install from <a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a>)</li>
 </ul><h2>
 <a name="add-a-standard-box" class="anchor" href="#add-a-standard-box"><span class="octicon octicon-link"></span></a>Add a standard box</h2>
 
-<div class="highlight"><pre>vagrant box add precise32 http://files.vagrantup.com/precise32.box
+<div class="highlight highlight-bash"><pre>vagrant box add precise32 http://files.vagrantup.com/precise32.box
 </pre></div>
 
 <h2>
 <a name="get-the-repository" class="anchor" href="#get-the-repository"><span class="octicon octicon-link"></span></a>Get the repository</h2>
 
-<div class="highlight"><pre>git clone git@github.com:jgrossiord/vagrant-silex-mysql.git
+<div class="highlight highlight-bash"><pre>git clone git@github.com:jgrossiord/vagrant-silex-mysql.git
 </pre></div>
 
 <h2>
 <a name="start-the-vm" class="anchor" href="#start-the-vm"><span class="octicon octicon-link"></span></a>Start the VM</h2>
 
-<div class="highlight"><pre><span class="nb">cd </span>vagrant-silex-mysql
+<div class="highlight highlight-bash"><pre><span class="nb">cd </span>vagrant-silex-mysql
 vagrant up
 </pre></div>
 
@@ -69,17 +69,17 @@ At the end of the startup process, the URL of the application will be shown.</p>
 
 <p>To suspend the 2 VM</p>
 
-<div class="highlight"><pre>vagrant <span class="nb">suspend</span>
+<div class="highlight highlight-bash"><pre>vagrant <span class="nb">suspend</span>
 </pre></div>
 
 <p>To destroy the 2 VM</p>
 
-<div class="highlight"><pre>vagrant destroy
+<div class="highlight highlight-bash"><pre>vagrant destroy
 </pre></div>
 
 <p>Connect in SSH to the VM's</p>
 
-<div class="highlight"><pre>vagrant ssh web
+<div class="highlight highlight-bash"><pre>vagrant ssh web
 vagrant ssh db
 </pre></div>
       </section>
@@ -89,6 +89,16 @@ vagrant ssh db
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-3352857-7");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
